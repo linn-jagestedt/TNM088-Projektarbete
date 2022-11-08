@@ -10,11 +10,13 @@ public class GroundScroll : MonoBehaviour
     public float startX;
 
     private void Update() {
-        transform.Translate(Vector2.left * state.speed * Time.deltaTime);
+        foreach (Transform child in transform) {
+            child.transform.Translate(Vector2.left * state.speed * Time.deltaTime);
 
-        if (transform.position.x <= endX) {
-            Vector2 pos = new Vector2(startX, transform.position.y);
-            transform.position = pos;
+            if (child.transform.position.x < endX) {
+                Vector2 pos = new Vector2(startX, child.transform.position.y);
+                child.transform.position = pos;
+            }
         }
     }
 }
