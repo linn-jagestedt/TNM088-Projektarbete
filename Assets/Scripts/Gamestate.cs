@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Options : MonoBehaviour
+public class Gamestate : MonoBehaviour
 {
     public float speed = 10;
     // Start is called before the first frame update
