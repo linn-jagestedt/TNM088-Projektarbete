@@ -351,7 +351,7 @@ GameObject:
   - component: {fileID: 1018833271}
   - component: {fileID: 1018833270}
   m_Layer: 0
-  m_Name: Gamestate
+  m_Name: GameState
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -369,7 +369,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db65158d909d82e4bbc639ae32837026, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 10
+  InitialPlatformSpeed: 10
 --- !u!4 &1018833271
 Transform:
   m_ObjectHideFlags: 0
@@ -680,7 +680,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be63832e413f1b94aaa05390f5ff29e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  state: {fileID: 1018833270}
+  GameState: {fileID: 1018833270}
   endX: -25
   startX: 36
 --- !u!4 &2063602386
