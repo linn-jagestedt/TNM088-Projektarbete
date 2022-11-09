@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Gamestate : MonoBehaviour
+public class GameState : MonoBehaviour
 {
     // The speed at the start of the game
     public float InitialPlatformSpeed = 10;
@@ -20,6 +20,7 @@ public class Gamestate : MonoBehaviour
     }
  
     // Counts the number of frames since the game started
+    public float SeccondsPassed { get => _seccondsPassed; }
     private float _seccondsPassed;
 
     // Start is called before the first frame update
