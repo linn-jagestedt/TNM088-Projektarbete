@@ -14,7 +14,8 @@ public class GroundScroll : MonoBehaviour
             child.transform.Translate(Vector2.left * state.speed * Time.deltaTime);
 
             if (child.transform.position.x < endX) {
-                Vector2 pos = new Vector2(startX, child.transform.position.y);
+                float newX = startX - (endX - child.transform.position.x);
+                Vector2 pos = new Vector2(newX, child.transform.position.y);
                 child.transform.position = pos;
             }
         }
