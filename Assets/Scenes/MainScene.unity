@@ -528,11 +528,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1568775765}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9c043214655284c08972a1cdc877eaf4, type: 3}
+  m_Script: {fileID: 11500000, guid: 991fc742c092806398b9ccf565818d53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 1568775767}
-  jumpHeight: 5
+  jumpHeight: 5.61
 --- !u!1 &1979531859
 GameObject:
   m_ObjectHideFlags: 0
