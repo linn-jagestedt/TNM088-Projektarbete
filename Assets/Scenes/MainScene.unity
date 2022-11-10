@@ -219,7 +219,7 @@ GameObject:
   - component: {fileID: 616650256}
   m_Layer: 0
   m_Name: BackgroundSpawner
-  m_TagString: Untagged
+  m_TagString: Monster
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -233,13 +233,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 616650255}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e9b6ade8479487645849e9aec171ed0d, type: 3}
+  m_Script: {fileID: 11500000, guid: d5c5423519a18964f941318cdd2c1e84, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   state: {fileID: 1018833270}
-  prefab: {fileID: 4897166801489883680, guid: 08848af2d91f3fc45a3be31f09aa3548, type: 3}
-  minTime: 0
-  maxTime: 0
+  prefab: {fileID: 5799757229509434497, guid: 08848af2d91f3fc45a3be31f09aa3548, type: 3}
+  speedRatio: 0.5
+  minTime: 5
+  maxTime: 20
+  Position: {x: 12, y: 0}
 --- !u!4 &616650257
 Transform:
   m_ObjectHideFlags: 0
