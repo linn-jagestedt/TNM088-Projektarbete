@@ -6,7 +6,7 @@ public class SpawnBackgrounds : MonoBehaviour
 {
     private float backgroundSpeed;
     
-    public Gamestate state;
+    public GameState state;
     public GameObject prefab;
     public float speedRatio;
     public int minTime;
@@ -21,7 +21,7 @@ public class SpawnBackgrounds : MonoBehaviour
     {
         _secondsElapsed = 0;
         _interval = Random.Range(minTime, maxTime);
-        backgroundSpeed = state.speed * speedRatio;
+        backgroundSpeed = state.CurrentPlatformSpeed * speedRatio;
     }
 
     // Update is called once per frame
