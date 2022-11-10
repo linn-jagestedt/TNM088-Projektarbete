@@ -20,7 +20,7 @@ public class GameState : MonoBehaviour
     }
  
     // Counts the number of frames since the game started
-    public float SeccondsPassed { get => _seccondsPassed; }
+    public float SeccondsPassed { get => _seccondsPassed;  }
     private float _seccondsPassed;
 
     // Start is called before the first frame update
