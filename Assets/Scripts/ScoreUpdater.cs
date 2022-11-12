@@ -18,6 +18,7 @@ public class ScoreUpdater : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        TextComponent.text = "Score: " + MathF.Floor(GameState.SeccondsPassed * 100).ToString();
+        string score = MathF.Floor(GameState.SeccondsPassed * 10).ToString("00000.##");
+        TextComponent.text = "Score: " + score;
     }
 }
