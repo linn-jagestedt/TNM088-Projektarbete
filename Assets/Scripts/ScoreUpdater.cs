@@ -7,16 +7,16 @@ using UnityEngine.UI;
 public class ScoreUpdater : MonoBehaviour
 {
     public GameState GameState;
-    public Text TextComponent;
+    private Text _textComponent;
 
     void Start()
     {
-        
+        _textComponent = GetComponent<Text>();        
     }
 
     void Update()
     {
         string score = MathF.Floor(GameState.SeccondsElapsed * 10).ToString("00000.##");
-        TextComponent.text = "Score: " + score;
+        _textComponent.text = "Score: " + score;
     }
 }
