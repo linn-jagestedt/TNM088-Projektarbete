@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class SpawnEnemies : MonoBehaviour
 {
-    
-    public GameState state;
     public GameObject prefab;
     public float speedRatio;
     public int minTime;
@@ -15,7 +13,6 @@ public class SpawnEnemies : MonoBehaviour
 
     private float _secondsElapsed;
     private float _interval;
-    private GameObject _enemy;
 
     // Start is called before the first frame update
     void Start()
@@ -34,16 +31,22 @@ public class SpawnEnemies : MonoBehaviour
             Spawn();
             _interval = Random.Range(minTime, maxTime);
         }
+    }
 
-        if (_enemy.transform.position.x <= EndX) {
-            Destroy(_enemy);
-        } 
+    private void FixedUpdate() {
+        foreach (Transform child in transform) {
+            if (child.position.x <= EndX) {
+                Destroy(child.gameObject);
+            }
+
+            child.gameObject.GetComponent<Rigidbody2D>().velocity = Vector2.left * GameState.CurrentPlatformSpeed * speedRatio;
+        }
     }
 
     void Spawn()
     {
-        _enemy = Instantiate(prefab, Position, Quaternion.identity);
-        _enemy.GetComponent<Rigidbody2D>().velocity = Vector2.left * state.CurrentPlatformSpeed * speedRatio;;
+        GameObject enemy = Instantiate(prefab, Position, Quaternion.identity);
+        enemy.transform.parent = transform;
 
         Debug.Log("spawn enemy");
     }

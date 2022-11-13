@@ -191,6 +191,56 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &255711551
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 255711553}
+  - component: {fileID: 255711552}
+  m_Layer: 0
+  m_Name: EnemySpawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &255711552
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 255711551}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a2aac58c958e48d0b8719fbedf61e0a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefab: {fileID: 3176146505337978595, guid: 1cc169466a7a14a0a9d8cb2155cc955e, type: 3}
+  speedRatio: 1
+  minTime: 2
+  maxTime: 6
+  Position: {x: 25, y: 0}
+  EndX: -10
+--- !u!4 &255711553
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 255711551}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 3.8611836, y: 3.752701, z: -0.22875799}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &359060826
 GameObject:
   m_ObjectHideFlags: 0
@@ -284,8 +334,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f1dfdf433924b5a6a2de7d8c7eb7746, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GameState: {fileID: 1018833270}
-  TextComponent: {fileID: 359060829}
 --- !u!1 &387082431
 GameObject:
   m_ObjectHideFlags: 0
@@ -315,7 +363,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5c5423519a18964f941318cdd2c1e84, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GameState: {fileID: 1018833270}
   prefab: {fileID: 5799757229509434497, guid: 08848af2d91f3fc45a3be31f09aa3548, type: 3}
   speedRatio: 0.5
   minTime: 1
@@ -848,7 +895,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 991fc742c092806398b9ccf565818d53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rb: {fileID: 1568775767}
   jumpHeight: 5.61
 --- !u!1 &1979531859
 GameObject:
@@ -1012,7 +1058,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be63832e413f1b94aaa05390f5ff29e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GameState: {fileID: 1018833270}
   endX: -25
   startX: 36
 --- !u!4 &2063602386
