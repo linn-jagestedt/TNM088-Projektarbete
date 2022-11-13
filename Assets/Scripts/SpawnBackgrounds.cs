@@ -4,8 +4,7 @@ using UnityEngine;
 
 public class SpawnBackgrounds : MonoBehaviour
 {
-    
-    public GameState state;
+    public GameState GameState;
     public GameObject prefab;
     public float speedRatio;
     public int minTime;
@@ -15,7 +14,6 @@ public class SpawnBackgrounds : MonoBehaviour
 
     private float _secondsElapsed;
     private float _interval;
-    private GameObject _obj;
 
     // Start is called before the first frame update
     void Start()
@@ -24,7 +22,6 @@ public class SpawnBackgrounds : MonoBehaviour
         _interval = Random.Range(minTime, maxTime);
     }
 
-    // Update is called once per frame
     void Update()
     {
         _secondsElapsed += Time.deltaTime;
@@ -33,17 +30,23 @@ public class SpawnBackgrounds : MonoBehaviour
             _secondsElapsed = 0;
             Spawn();
             _interval = Random.Range(minTime, maxTime);
-        }
+        }   
+    }
 
-        if (_obj.transform.position.x <= EndX) {
-            Destroy(_obj);
-        } 
+    private void FixedUpdate() {
+        foreach (Transform child in transform) {
+            if (child.position.x <= EndX) {
+                Destroy(child.gameObject);
+            }
+
+            child.gameObject.GetComponent<Rigidbody2D>().velocity = Vector2.left * GameState.CurrentPlatformSpeed * speedRatio;
+        }
     }
 
     void Spawn()
     {
-        _obj = Instantiate(prefab, Position, Quaternion.identity);
-        _obj.GetComponent<Rigidbody2D>().velocity = Vector2.left * state.CurrentPlatformSpeed * speedRatio;;
+        GameObject obj = Instantiate(prefab, Position, Quaternion.identity);
+        obj.transform.parent = transform;
 
         Debug.Log("spawn background");
     }
