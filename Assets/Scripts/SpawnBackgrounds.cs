@@ -11,9 +11,11 @@ public class SpawnBackgrounds : MonoBehaviour
     public int minTime;
     public int maxTime;
     public Vector2 Position;
+    public float EndX;
 
     private float _secondsElapsed;
     private float _interval;
+    private GameObject _obj;
 
     // Start is called before the first frame update
     void Start()
@@ -32,12 +34,16 @@ public class SpawnBackgrounds : MonoBehaviour
             Spawn();
             _interval = Random.Range(minTime, maxTime);
         }
+
+        if (_obj.transform.position.x <= EndX) {
+            Destroy(_obj);
+        } 
     }
 
     void Spawn()
     {
-        GameObject obj = Instantiate(prefab, Position, Quaternion.identity);
-        obj.GetComponent<Rigidbody2D>().velocity = Vector2.left * state.CurrentPlatformSpeed * speedRatio;;
+        _obj = Instantiate(prefab, Position, Quaternion.identity);
+        _obj.GetComponent<Rigidbody2D>().velocity = Vector2.left * state.CurrentPlatformSpeed * speedRatio;;
 
         Debug.Log("spawn background");
     }

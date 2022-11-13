@@ -319,8 +319,9 @@ MonoBehaviour:
   prefab: {fileID: 5799757229509434497, guid: 08848af2d91f3fc45a3be31f09aa3548, type: 3}
   speedRatio: 0.5
   minTime: 5
-  maxTime: 20
+  maxTime: 15
   Position: {x: 20, y: 0}
+  EndX: -10
 --- !u!4 &387082433
 Transform:
   m_ObjectHideFlags: 0
