@@ -34,6 +34,9 @@ public class GameState : MonoBehaviour
     {
         // Add the secconds passed since last frame to _seccondsPassed
         _seccondsElapsed += Time.deltaTime;
+    }
+
+    void FixedUpdate() {
         Debug.Log($"_seccondsElapsed: {_seccondsElapsed}, CurrentPlatformSpeed: {CurrentPlatformSpeed}");
     }
 
