@@ -9,16 +9,14 @@ public class ScoreUpdater : MonoBehaviour
     public GameState GameState;
     public Text TextComponent;
 
-    // Start is called before the first frame update
     void Start()
     {
         
     }
 
-    // Update is called once per frame
     void Update()
     {
-        string score = MathF.Floor(GameState.SeccondsPassed * 10).ToString("00000.##");
+        string score = MathF.Floor(GameState.SeccondsElapsed * 10).ToString("00000.##");
         TextComponent.text = "Score: " + score;
     }
 }
