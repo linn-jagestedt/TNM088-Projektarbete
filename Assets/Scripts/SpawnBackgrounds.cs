@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class SpawnBackgrounds : MonoBehaviour
 {
-    public GameState GameState;
     public GameObject prefab;
     public float speedRatio;
     public int minTime;

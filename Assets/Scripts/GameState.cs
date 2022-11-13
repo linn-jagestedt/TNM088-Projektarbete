@@ -15,13 +15,12 @@ public class GameState : MonoBehaviour
     public float SpeedIncrements = 5;
 
     // The current speed
-    public float CurrentPlatformSpeed { 
-        get => InitialPlatformSpeed + SpeedIncrements * MathF.Floor((_seccondsElapsed / TimeUntilSpeedIncrease)); 
-    }
+    public static float CurrentPlatformSpeed { get => _currentPlatformSpeed; }
+    private static float _currentPlatformSpeed;
  
     // Counts the number of secconds since the game started
-    public float SeccondsElapsed { get => _seccondsElapsed;  }
-    private float _seccondsElapsed;
+    public static float SeccondsElapsed { get => _seccondsElapsed;  }
+    private static float _seccondsElapsed;
 
     // Start is called before the first frame update
     void Start()
@@ -34,6 +33,7 @@ public class GameState : MonoBehaviour
     {
         // Add the secconds passed since last frame to _seccondsPassed
         _seccondsElapsed += Time.deltaTime;
+        _currentPlatformSpeed = InitialPlatformSpeed + SpeedIncrements * MathF.Floor(_seccondsElapsed / TimeUntilSpeedIncrease);
     }
 
     void FixedUpdate() {

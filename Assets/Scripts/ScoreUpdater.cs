@@ -6,7 +6,6 @@ using UnityEngine.UI;
 
 public class ScoreUpdater : MonoBehaviour
 {
-    public GameState GameState;
     private Text _textComponent;
 
     void Start()
