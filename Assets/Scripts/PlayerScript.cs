@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class PlayerScript : MonoBehaviour
 {
-    public float jumpHeight;
+    public GameState GameState;
+    public PrefabSpawner[] Spawners;
+    public float JumpHeight;
     private Rigidbody2D _rb;
 
     void Start()
@@ -16,7 +18,7 @@ public class PlayerScript : MonoBehaviour
     {
         if(Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.UpArrow)) {
             Debug.Log("jump");
-            _rb.AddForce(Vector2.up*jumpHeight, ForceMode2D.Impulse);
+            _rb.AddForce(Vector2.up * JumpHeight, ForceMode2D.Impulse);
         }
     }
 
@@ -25,6 +27,10 @@ public class PlayerScript : MonoBehaviour
         if (collision.gameObject.tag == "Enemy")
         {
             Debug.Log("Game Over");
+            GameState.Reset();
+            foreach (PrefabSpawner spawner in Spawners) {
+                spawner.Reset();
+            }
         }
     }
 }
