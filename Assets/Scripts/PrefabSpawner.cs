@@ -2,13 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SpawnBackgrounds : MonoBehaviour
+public class PrefabSpawner : MonoBehaviour
 {
-    public GameObject prefab;
-    public float speedRatio;
-    public int minTime;
-    public int maxTime;
-    public Vector2 Position;
+    public GameState GameState;
+    public GameObject Prefab;
+    public float SpeedRatio;
+    public int MinInterval;
+    public int MaxInterval;
+    public Vector2 SpawnPosition;
     public float EndX;
 
     private float _secondsElapsed;
@@ -18,7 +19,7 @@ public class SpawnBackgrounds : MonoBehaviour
     void Start()
     {
         _secondsElapsed = 0;
-        _interval = Random.Range(minTime, maxTime);
+        _interval = Random.Range(MinInterval, MaxInterval);
     }
 
     void Update()
@@ -28,7 +29,7 @@ public class SpawnBackgrounds : MonoBehaviour
         if (_secondsElapsed > _interval) {
             _secondsElapsed = 0;
             Spawn();
-            _interval = Random.Range(minTime, maxTime);
+            _interval = Random.Range(MinInterval, MaxInterval);
         }   
     }
 
@@ -38,15 +39,19 @@ public class SpawnBackgrounds : MonoBehaviour
                 Destroy(child.gameObject);
             }
 
-            child.gameObject.GetComponent<Rigidbody2D>().velocity = Vector2.left * GameState.CurrentPlatformSpeed * speedRatio;
+            child.gameObject.GetComponent<Rigidbody2D>().velocity = Vector2.left * GameState.CurrentPlatformSpeed * SpeedRatio;
         }
     }
 
-    void Spawn()
+    private void Spawn()
     {
-        GameObject obj = Instantiate(prefab, Position, Quaternion.identity);
+        GameObject obj = Instantiate(Prefab, SpawnPosition, Quaternion.identity);
         obj.transform.parent = transform;
+    }
 
-        Debug.Log("spawn background");
+    public void Reset() {
+        foreach (Transform child in transform) {
+            Destroy(child.gameObject);
+        }
     }
 }

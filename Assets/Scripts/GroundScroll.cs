@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class GroundScroll : MonoBehaviour
 {
+    public GameState GameState;
     public float endX;
     public float startX;
 
