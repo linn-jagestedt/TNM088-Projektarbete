@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PlayerScript : MonoBehaviour
 {
+    public ScreenShake ScreenShake;
     public GameState GameState;
     public PrefabSpawner[] Spawners;
     public float JumpHeight;
@@ -39,6 +40,9 @@ public class PlayerScript : MonoBehaviour
         if (collision.gameObject.tag == "Enemy")
         {
             Debug.Log("Game Over");
+
+            ScreenShake.StartScreenShake();
+
             GameState.Reset();
             foreach (PrefabSpawner spawner in Spawners) {
                 spawner.Reset();

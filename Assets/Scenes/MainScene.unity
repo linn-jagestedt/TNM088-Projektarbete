@@ -236,7 +236,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   GameState: {fileID: 1018833270}
-  Prefab: {fileID: 3176146505337978595, guid: 1cc169466a7a14a0a9d8cb2155cc955e, type: 3}
+  Prefabs:
+  - {fileID: 3176146505337978595, guid: 1cc169466a7a14a0a9d8cb2155cc955e, type: 3}
   SpeedRatio: 1
   MinInterval: 2
   MaxInterval: 6
@@ -381,7 +382,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   GameState: {fileID: 1018833270}
-  Prefab: {fileID: 5799757229509434497, guid: 08848af2d91f3fc45a3be31f09aa3548, type: 3}
+  Prefabs:
+  - {fileID: 5799757229509434497, guid: ce9430220e1b02f43b796a599076c65e, type: 3}
+  - {fileID: 5799757229509434497, guid: 08848af2d91f3fc45a3be31f09aa3548, type: 3}
   SpeedRatio: 0.5
   MinInterval: 2
   MaxInterval: 4
@@ -398,6 +401,7 @@ GameObject:
   - component: {fileID: 400864615}
   - component: {fileID: 400864614}
   - component: {fileID: 400864613}
+  - component: {fileID: 400864616}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -471,6 +475,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &400864616
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 400864612}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c738f8a553fb6975c8a4fb3dc931bd3b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  EaseOutFactor: 0
+  Magnitude: 0.1
+  Duration: 0.2
 --- !u!1 &656496623
 GameObject:
   m_ObjectHideFlags: 0
@@ -899,6 +918,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 991fc742c092806398b9ccf565818d53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ScreenShake: {fileID: 400864616}
   GameState: {fileID: 1018833270}
   Spawners:
   - {fileID: 387082434}
