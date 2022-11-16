@@ -5,7 +5,7 @@ using UnityEngine;
 public class PrefabSpawner : MonoBehaviour
 {
     public GameState GameState;
-    public GameObject Prefab;
+    public GameObject[] Prefabs;
     public float SpeedRatio;
     public int MinInterval;
     public int MaxInterval;
@@ -14,10 +14,12 @@ public class PrefabSpawner : MonoBehaviour
 
     private float _secondsElapsed;
     private float _interval;
+    private int _lastPrefab;
 
     // Start is called before the first frame update
     void Start()
     {
+        _lastPrefab = 0;
         _secondsElapsed = 0;
         _interval = Random.Range(MinInterval, MaxInterval);
     }
@@ -45,7 +47,18 @@ public class PrefabSpawner : MonoBehaviour
 
     private void Spawn()
     {
-        GameObject obj = Instantiate(Prefab, SpawnPosition, Quaternion.identity);
+        int index = 0;
+        
+        if (Prefabs.Length > 1) {
+            
+            do {
+                index = Random.Range(0, Prefabs.Length);
+            } while (index == _lastPrefab);
+    	    
+            _lastPrefab = index;
+        }
+    	
+        GameObject obj = Instantiate(Prefabs[index], SpawnPosition, Quaternion.identity);
         obj.transform.parent = transform;
     }
 
