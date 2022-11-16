@@ -7,8 +7,8 @@ public class PrefabSpawner : MonoBehaviour
     public GameState GameState;
     public GameObject[] Prefabs;
     public float SpeedRatio;
-    public int MinInterval;
-    public int MaxInterval;
+    public float MinInterval;
+    public float MaxInterval;
     public Vector2 SpawnPosition;
     public float EndX;
 
@@ -58,7 +58,7 @@ public class PrefabSpawner : MonoBehaviour
             _lastPrefab = index;
         }
     	
-        GameObject obj = Instantiate(Prefabs[index], SpawnPosition, Quaternion.identity);
+        GameObject obj = Instantiate(Prefabs[index], SpawnPosition + (Vector2)Prefabs[index].transform.position, Quaternion.identity);
         obj.transform.parent = transform;
     }
 
