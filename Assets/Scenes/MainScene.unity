@@ -238,9 +238,12 @@ MonoBehaviour:
   GameState: {fileID: 1018833270}
   Prefabs:
   - {fileID: 3176146505337978595, guid: 1cc169466a7a14a0a9d8cb2155cc955e, type: 3}
+  - {fileID: 3176146505337978595, guid: 5266fbf85547902cc8a36ae755156e7f, type: 3}
+  - {fileID: 3176146505337978595, guid: f7abc34a1b68d0cfb8651364ab57934f, type: 3}
+  - {fileID: 3176146505337978595, guid: d1370a39efdb9f558bbd2467bdbe4430, type: 3}
   SpeedRatio: 1
-  MinInterval: 2
-  MaxInterval: 6
+  MinInterval: 0.7
+  MaxInterval: 2
   SpawnPosition: {x: 25, y: -0.7}
   EndX: -10
 --- !u!1 &359060826
@@ -652,9 +655,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db65158d909d82e4bbc639ae32837026, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  InitialPlatformSpeed: 8
+  InitialPlatformSpeed: 10
   TimeUntilSpeedIncrease: 10
-  SpeedIncrements: 2
+  SpeedIncrements: 1
 --- !u!4 &1018833271
 Transform:
   m_ObjectHideFlags: 0
