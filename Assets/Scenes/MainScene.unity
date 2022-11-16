@@ -487,9 +487,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c738f8a553fb6975c8a4fb3dc931bd3b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  EaseOutFactor: 0
-  Magnitude: 0.1
-  Duration: 0.2
+  EaseOutFactor: 0.8
+  Magnitude: 0.8
+  Duration: 0.3
 --- !u!1 &656496623
 GameObject:
   m_ObjectHideFlags: 0
