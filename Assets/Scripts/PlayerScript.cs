@@ -19,7 +19,7 @@ public class PlayerScript : MonoBehaviour
 
     void Update()
     {
-        if((Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.UpArrow)) && _grounded) {
+        if((Input.GetKey(KeyCode.Space) || Input.GetKey(KeyCode.UpArrow)) && _grounded) {
             Debug.Log("jump");
             _rb.AddForce(Vector2.up * JumpHeight, ForceMode2D.Impulse);
             _grounded = false;
