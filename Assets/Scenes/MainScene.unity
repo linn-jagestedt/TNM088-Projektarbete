@@ -386,12 +386,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   GameState: {fileID: 1018833270}
   Prefabs:
-  - {fileID: 5799757229509434497, guid: ce9430220e1b02f43b796a599076c65e, type: 3}
-  - {fileID: 5799757229509434497, guid: 08848af2d91f3fc45a3be31f09aa3548, type: 3}
+  - {fileID: 5460394694774768764, guid: ebd4c55b1093dfe48924e85e5644e4b6, type: 3}
+  - {fileID: 5460394694774768764, guid: fdd605e5d0d71b948913c99d2b0839b5, type: 3}
   SpeedRatio: 0.5
-  MinInterval: 2
-  MaxInterval: 4
-  SpawnPosition: {x: 25, y: 5}
+  MinInterval: 5
+  MaxInterval: 10
+  SpawnPosition: {x: 25, y: 2}
   EndX: -10
 --- !u!1 &400864612
 GameObject:
