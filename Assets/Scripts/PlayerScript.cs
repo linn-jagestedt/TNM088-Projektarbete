@@ -9,21 +9,24 @@ public class PlayerScript : MonoBehaviour
     public PrefabSpawner[] Spawners;
     public float JumpHeight;
     private Rigidbody2D _rb;
-    private bool _grounded;
+
+    private Animator _animator;
 
     void Start()
     {
+        _animator = GetComponent<Animator>();
         _rb = GetComponent<Rigidbody2D>();
-        _grounded = true;
     }
 
     void Update()
     {
-        if((Input.GetKey(KeyCode.Space) || Input.GetKey(KeyCode.UpArrow)) && _grounded) {
+        if((Input.GetKey(KeyCode.Space) || Input.GetKey(KeyCode.UpArrow)) && _animator.GetBool("Grounded")) {
             Debug.Log("jump");
             _rb.AddForce(Vector2.up * JumpHeight, ForceMode2D.Impulse);
-            _grounded = false;
+            _animator.SetBool("Grounded", false);
         }
+
+        _animator.SetFloat("Vertical_Speed", _rb.velocity.y);
     }
 
 
@@ -31,7 +34,7 @@ public class PlayerScript : MonoBehaviour
     {
         if (collision.gameObject.tag == "Ground")
         {
-            _grounded = true;
+            _animator.SetBool("Grounded", true);
         }
     }
 

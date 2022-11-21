@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: fed2a4586ee6725458a0437a4335948f
+guid: c7a9eb3122dfda673b728d001554ba6d
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -70,7 +70,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -117,12 +117,12 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Tigger_0
+      name: Tigger_Walk_0
       rect:
         serializedVersion: 2
         x: 0
         y: 90
-        width: 90
+        width: 74
         height: 90
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -131,19 +131,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 85a457f114de133aab9a14ced530404a
-      internalID: -1542322034
+      spriteID: 19bc3a5136d0cc6efb8605fe9032fba3
+      internalID: -596005428
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tigger_1
+      name: Tigger_Walk_1
       rect:
         serializedVersion: 2
-        x: 90
+        x: 74
         y: 90
-        width: 90
+        width: 74
         height: 90
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -152,19 +152,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f0ab691199601ed36a67e0cd19894985
-      internalID: 2016544437
+      spriteID: c889b4133dc2a67b19bb71bd19c63781
+      internalID: 106079227
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tigger_2
+      name: Tigger_Walk_2
       rect:
         serializedVersion: 2
-        x: 180
+        x: 148
         y: 90
-        width: 90
+        width: 74
         height: 90
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -173,19 +173,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e47167cf7931699c587f286641bbe2a9
-      internalID: 1043242972
+      spriteID: be811957e3eab7393b446d5fc39a2467
+      internalID: -1231163542
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tigger_3
+      name: Tigger_Walk_3
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 90
+        width: 74
         height: 90
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -194,19 +194,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8730ea6d198bddfa0ba449edd2cbd813
-      internalID: 10491052
+      spriteID: f51b9eb8244fda5c891cb128ee39371e
+      internalID: -274610321
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tigger_4
+      name: Tigger_Walk_4
       rect:
         serializedVersion: 2
-        x: 90
+        x: 74
         y: 0
-        width: 90
+        width: 74
         height: 90
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -215,19 +215,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7acce9795f7f5c5d7b4ea79a1a94a45f
-      internalID: 2103393836
+      spriteID: 6d5a6d72a8a437d8dbf4a31d7da5baca
+      internalID: -1362645006
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tigger_5
+      name: Tigger_Walk_5
       rect:
         serializedVersion: 2
-        x: 180
+        x: 148
         y: 0
-        width: 90
+        width: 74
         height: 90
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -236,8 +236,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b5850d49b6f605e6a876770146327d7b
-      internalID: 489510898
+      spriteID: 182a1ce39c891f92daf77ba2ec5ec3cd
+      internalID: 1258952139
       vertices: []
       indices: 
       edges: []
@@ -253,12 +253,12 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Tigger_1: 2016544437
-      Tigger_5: 489510898
-      Tigger_3: 10491052
-      Tigger_2: 1043242972
-      Tigger_4: 2103393836
-      Tigger_0: -1542322034
+      Tigger_Walk_0: -596005428
+      Tigger_Walk_2: -1231163542
+      Tigger_Walk_4: -1362645006
+      Tigger_Walk_5: 1258952139
+      Tigger_Walk_3: -274610321
+      Tigger_Walk_1: 106079227
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
