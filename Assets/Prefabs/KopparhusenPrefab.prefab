@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4928768363338069590}
   - component: {fileID: 3453008794336593505}
   m_Layer: 0
-  m_Name: VattentornetPrefab
+  m_Name: KopparhusenPrefab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -74,7 +74,7 @@ SpriteRenderer:
   m_SortingLayerID: -1649177725
   m_SortingLayer: -1
   m_SortingOrder: 0
-  m_Sprite: {fileID: 94583611, guid: f43b4870d29c8c941b95476ebeee5a42, type: 3}
+  m_Sprite: {fileID: -1108713974, guid: 7458a09b6bf82dc4d8ad6e0c4452690a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

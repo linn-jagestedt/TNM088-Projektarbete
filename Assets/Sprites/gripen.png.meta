@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: f43b4870d29c8c941b95476ebeee5a42
+guid: 8c7d5da434326bb42935a44e710d31a0
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -117,13 +117,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: vattentornet_0
+      name: gripen_0
       rect:
         serializedVersion: 2
-        x: 320
+        x: 520
         y: 0
-        width: 440
-        height: 990
+        width: 880
+        height: 1072
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -131,8 +131,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4f71a1d34249c59449fdc286ff0c8435
-      internalID: 94583611
+      spriteID: 7484b5bdb67867d45a98a3abfba3c2f7
+      internalID: 1614609710
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      vattentornet_0: 94583611
+      gripen_0: 1614609710
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

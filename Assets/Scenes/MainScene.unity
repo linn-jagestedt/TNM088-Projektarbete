@@ -388,6 +388,9 @@ MonoBehaviour:
   Prefabs:
   - {fileID: 5460394694774768764, guid: ebd4c55b1093dfe48924e85e5644e4b6, type: 3}
   - {fileID: 5460394694774768764, guid: fdd605e5d0d71b948913c99d2b0839b5, type: 3}
+  - {fileID: 5460394694774768764, guid: 802cb89f2379dbf44b118af081bf3974, type: 3}
+  - {fileID: 5460394694774768764, guid: 49cefd6cf8e2f9247915c05f4a9d0c54, type: 3}
+  - {fileID: 5460394694774768764, guid: 21dbc8f43639aa54aa65279df448a666, type: 3}
   SpeedRatio: 0.5
   MinInterval: 5
   MaxInterval: 10

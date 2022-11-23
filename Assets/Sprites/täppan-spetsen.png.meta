@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: f43b4870d29c8c941b95476ebeee5a42
+guid: 655ed62f03e253b418414ea65381ff95
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -117,13 +117,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: vattentornet_0
+      name: "t\xE4ppan-spetsen_0"
       rect:
         serializedVersion: 2
-        x: 320
+        x: 64
         y: 0
-        width: 440
-        height: 990
+        width: 1732
+        height: 624
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -131,8 +131,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4f71a1d34249c59449fdc286ff0c8435
-      internalID: 94583611
+      spriteID: b07822426ddee7b4cbb54a58d6269e02
+      internalID: -983120888
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      vattentornet_0: 94583611
+      "t\xE4ppan-spetsen_0": -983120888
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
