@@ -5,6 +5,7 @@ using UnityEngine;
 public class GroundScroll : MonoBehaviour
 {
     public GameState GameState;
+    public float SpeedFactor = 1;
     public float endX;
     public float startX;
 
@@ -20,7 +21,7 @@ public class GroundScroll : MonoBehaviour
 
     private void FixedUpdate() {
         foreach (Rigidbody2D rb in GetComponentsInChildren<Rigidbody2D>()) {
-            rb.velocity = Vector2.left * GameState.CurrentPlatformSpeed;
+            rb.velocity = Vector2.left * GameState.CurrentPlatformSpeed * SpeedFactor;
         }
     }
 }

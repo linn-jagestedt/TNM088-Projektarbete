@@ -13,9 +13,9 @@ TagManager:
   - 
   - Water
   - UI
-  - 
-  - 
-  - 
+  - Foreground
+  - Middle
+  - Background
   - 
   - 
   - 
@@ -41,10 +41,13 @@ TagManager:
   - 
   m_SortingLayers:
   - name: Background
-    uniqueID: 2504783705
+    uniqueID: 2713445005
     locked: 0
-  - name: BackgroundPrefabs
+  - name: Middle
     uniqueID: 2645789571
+    locked: 0
+  - name: Foreground
+    uniqueID: 2504783705
     locked: 0
   - name: Default
     uniqueID: 0
