@@ -21,7 +21,6 @@ public class PlayerScript : MonoBehaviour
     void Update()
     {
         if((Input.GetKey(KeyCode.Space) || Input.GetKey(KeyCode.UpArrow)) && _animator.GetBool("Grounded")) {
-            Debug.Log("jump");
             _rb.AddForce(Vector2.up * JumpHeight, ForceMode2D.Impulse);
             _animator.SetBool("Grounded", false);
         }

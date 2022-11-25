@@ -242,8 +242,8 @@ MonoBehaviour:
   - {fileID: 3176146505337978595, guid: f7abc34a1b68d0cfb8651364ab57934f, type: 3}
   - {fileID: 3176146505337978595, guid: d1370a39efdb9f558bbd2467bdbe4430, type: 3}
   SpeedRatio: 1
-  MinInterval: 0.7
-  MaxInterval: 2
+  MinInterval: 1
+  MaxInterval: 2.5
   SpawnPosition: {x: 18, y: -1.5}
   EndX: -10
 --- !u!1 &265985569
@@ -339,7 +339,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1581522291
-  m_SortingLayer: -3
+  m_SortingLayer: -4
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: bed0d75b5605a9421a566ab27a4a5e1f, type: 3}
   m_Color: {r: 0.7924528, g: 0.7924528, b: 0.7924528, a: 1}
@@ -424,7 +424,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Test
+  m_Text: 'Score: 0000'
 --- !u!222 &359060830
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1008,7 +1008,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1581522291
-  m_SortingLayer: -3
+  m_SortingLayer: -4
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: bed0d75b5605a9421a566ab27a4a5e1f, type: 3}
   m_Color: {r: 0.79607844, g: 0.79607844, b: 0.79607844, a: 1}
@@ -1155,8 +1155,8 @@ MonoBehaviour:
   Prefabs:
   - {fileID: 2162691646884226680, guid: 79576866675bd1327899b95d0efbfdf0, type: 3}
   SpeedRatio: 1
-  MinInterval: 0.5
-  MaxInterval: 3
+  MinInterval: 1
+  MaxInterval: 4
   SpawnPosition: {x: 18, y: 3.2}
   EndX: -10
 --- !u!4 &1434265226
@@ -1280,8 +1280,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -1790183591
-  m_SortingLayer: -1
+  m_SortingLayerID: -1687601535
+  m_SortingLayer: -2
   m_SortingOrder: 1
   m_Sprite: {fileID: -1542322034, guid: fed2a4586ee6725458a0437a4335948f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -1645,8 +1645,8 @@ MonoBehaviour:
   Prefabs:
   - {fileID: 2162691646884226680, guid: 11b303f25b8423179a6b7a58007094a7, type: 3}
   SpeedRatio: 0.5
-  MinInterval: 0.1
-  MaxInterval: 1.5
+  MinInterval: 0.2
+  MaxInterval: 2
   SpawnPosition: {x: 18, y: 2.8}
   EndX: -10
 --- !u!4 &2046283497
