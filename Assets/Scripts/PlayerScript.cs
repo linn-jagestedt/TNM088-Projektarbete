@@ -6,13 +6,13 @@ public class PlayerScript : MonoBehaviour
 {
     public ScreenShake ScreenShake;
     public GameState GameState;
-    public PrefabSpawner[] Spawners;
     public float JumpHeight;
     private Rigidbody2D _rb;
 
+    public Animator Animator { get => _animator; }
     private Animator _animator;
 
-    void Start()
+    void Awake()
     {
         _animator = GetComponent<Animator>();
         _rb = GetComponent<Rigidbody2D>();
@@ -20,9 +20,11 @@ public class PlayerScript : MonoBehaviour
 
     void Update()
     {
-        if((Input.GetKey(KeyCode.Space) || Input.GetKey(KeyCode.UpArrow)) && _animator.GetBool("Grounded")) {
-            _rb.AddForce(Vector2.up * JumpHeight, ForceMode2D.Impulse);
-            _animator.SetBool("Grounded", false);
+        if (GameState.IsRunning) {
+            if((Input.GetKey(KeyCode.Space) || Input.GetKey(KeyCode.UpArrow)) && _animator.GetBool("Grounded")) {
+                _rb.AddForce(Vector2.up * JumpHeight, ForceMode2D.Impulse);
+                _animator.SetBool("Grounded", false);
+            }
         }
 
         _animator.SetFloat("Vertical_Speed", _rb.velocity.y);
@@ -45,10 +47,7 @@ public class PlayerScript : MonoBehaviour
 
             ScreenShake.StartScreenShake();
 
-            GameState.Reset();
-            foreach (PrefabSpawner spawner in Spawners) {
-                spawner.Reset();
-            }
+            GameState.StopGame();
         }
     }
 }

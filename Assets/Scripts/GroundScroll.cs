@@ -21,7 +21,11 @@ public class GroundScroll : MonoBehaviour
 
     private void FixedUpdate() {
         foreach (Rigidbody2D rb in GetComponentsInChildren<Rigidbody2D>()) {
-            rb.velocity = Vector2.left * GameState.CurrentPlatformSpeed * SpeedFactor;
+            if (GameState.IsRunning) {
+                rb.velocity = Vector2.left * GameState.CurrentPlatformSpeed * SpeedFactor;
+            } else {
+                rb.velocity = Vector2.zero;
+            }
         }
     }
 }

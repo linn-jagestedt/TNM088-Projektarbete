@@ -26,13 +26,15 @@ public class PrefabSpawner : MonoBehaviour
 
     void Update()
     {
-        _secondsElapsed += Time.deltaTime;
+        if (GameState.IsRunning) {
+            _secondsElapsed += Time.deltaTime;
 
-        if (_secondsElapsed > _interval) {
-            _secondsElapsed = 0;
-            Spawn();
-            _interval = Random.Range(MinInterval, MaxInterval);
-        }   
+            if (_secondsElapsed > _interval) {
+                _secondsElapsed = 0;
+                Spawn();
+                _interval = Random.Range(MinInterval, MaxInterval);
+            }   
+        }
     }
 
     private void FixedUpdate() {
@@ -41,7 +43,11 @@ public class PrefabSpawner : MonoBehaviour
                 Destroy(child.gameObject);
             }
 
-            child.gameObject.GetComponent<Rigidbody2D>().velocity = Vector2.left * GameState.CurrentPlatformSpeed * SpeedRatio;
+            if (GameState.IsRunning) {
+                child.gameObject.GetComponent<Rigidbody2D>().velocity = Vector2.left * GameState.CurrentPlatformSpeed * SpeedRatio;
+            } else {
+                child.gameObject.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
+            }
         }
     }
 
